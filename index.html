@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>West Bengal Police Social Media Violation Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1><img src="" alt=""> West Bengal Police Social Media Violation Tracker</h1>
+
+  <form id="reportForm">
+    <label for="reporterName">Name of Reporting Person:</label>
+    <input type="text" id="reporterName" name="reporterName" required>
+
+    <label for="designation">Designation:</label>
+    <select id="designation" name="designation">
+      <option value="Constable">Constable</option>
+      <option value="Assistant Sub Inspector">Assistant Sub Inspector</option>
+      <option value="Sub Inspector">Sub Inspector</option>
+      <option value="Inspector">Inspector</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="violation">Violation Description:</label>
+    <textarea id="violation" name="violation" required></textarea>
+
+    <label for="link">Platform Links (comma-separated):</label>
+    <input type="text" id="link" name="link" required>
+
+    <button type="submit">Report Violation</button>
+  </form>
+
+  <ul id="violationList"></ul>
+
+  <!-- Modal for Editing Violations -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Violation</h2>
+      <form id="editForm">
+        <label for="editCaseId">Case ID:</label>
+        <input type="text" id="editCaseId" name="editCaseId" required>
+
+        <label for="editReporterName">Reporting Person's Name:</label>
+        <input type="text" id="editReporterName" name="editReporterName" required>
+
+        <label for="editUsername">Username:</label>
+        <input type="text" id="editUsername" name="editUsername" required>
+
+        <label for="editDesignation">Designation:</label>
+        <select id="editDesignation" name="editDesignation">
+          <option value="Constable">Constable</option>
+          <option value="Assistant Sub Inspector">Assistant Sub Inspector</option>
+          <option value="Sub Inspector">Sub Inspector</option>
+          <option value="Inspector">Inspector</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="editViolation">Violation Description:</label>
+        <textarea id="editViolation" name="editViolation" required></textarea>
+
+        <label for="editLinks">Platform Links (comma-separated):</label>
+        <input type="text" id="editLinks" name="editLinks" required>
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    Tool Developed By Anurag Roy
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

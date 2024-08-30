@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #001f3f, #ff4136);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h1 img {
+    margin-right: 10px;
+    width: 50px;
+    height: auto;
+}
+
+/* Form Styles */
+/* General Styles for the Form */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #ffffff; /* Label color */
+}
+
+form input,
+form select,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Dropdown (Select) Styling */
+form select {
+    appearance: none; /* Remove default dropdown arrow */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    color: #ffffff; /* Text color */
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #0074d9; /* Border color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+form select:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #005bb5; /* Darken border color on hover */
+}
+
+form select:focus {
+    outline: none; /* Remove outline on focus */
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #ff4136; /* Change border color on focus */
+}
+
+form select option {
+    background-color: #001f3f; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+/* Style the Dropdown Arrow */
+form select {
+    position: relative;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><polygon fill="white" points="6,9 0,3 12,3"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 12px;
+}
+
+/* Input and Textarea Styles */
+form input::placeholder,
+form textarea::placeholder {
+    color: #dddddd;
+}
+
+form input,
+form textarea {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+form button {
+    background-color: #ff4136;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ff6347;
+}
+
+#violationList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+#violationList li {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#violationList li div {
+    display: flex;
+    flex-direction: column;
+}
+
+#violationList li div p {
+    margin: 5px 0;
+}
+
+#violationList li div button {
+    background-color: #ff4136;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#violationList li div button:hover {
+    background-color: #ff6347;
+}
+
+#violationList li div button.edit {
+    background-color: #0074d9;
+    margin-right: 10px;
+}
+
+#violationList li div button.edit:hover {
+    background-color: #0080ff;
+}
+
+.edited-label {
+    font-size: 0.9rem;
+    color: #ffdc00;
+    margin-left: 5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padd
